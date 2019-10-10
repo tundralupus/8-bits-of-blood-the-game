@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://imagens/Plano de fundo, doação (F).png" type="Texture" id=1]
+[ext_resource path="res://imagens/Bancada.png" type="Texture" id=2]
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=3]
+[ext_resource path="res://Next.gd" type="Script" id=4]
+
+[node name="Node" type="Node"]
+
+[node name="Plano de fundo, doação (F)" type="Sprite" parent="."]
+position = Vector2( 682.647, 385.656 )
+scale = Vector2( 0.354523, 0.353502 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bancada" type="Sprite" parent="Plano de fundo, doação (F)"]
+position = Vector2( 6.12549, 1.58594 )
+texture = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="Plano de fundo, doação (F)"]
+margin_left = -866.875
+margin_top = -1083.41
+margin_right = 653.125
+margin_bottom = 1079.59
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Plano de fundo, doação (F)/Panel"]
+margin_right = 235.0
+margin_bottom = 282.0
+rect_scale = Vector2( 6.4808, 7.70609 )
+visible_characters = 0
+text = "A doação pode ser resumida como um ato de empatia e compaixão pelo próximo, ajudar um desconhecido é um grande gesto de dignidade, podemos também afirmar que a doação traz uma sensação de bem-estar para o doador, uma reação do próprio corpo reconhecendo o bem que está sendo feito. 
+
+O Brasil constantemente precisa de reposição em seus bancos de sangue, muitas vezes alguns tipos sanguíneos entram em estado crítico de quantidades armazenadas, necessitando de novas doações. A doação salva muitas pessoas, o sangue é essencial para o hospital, sendo usado em tratamentos, cirurgias e procedimentos diários que são de extrema importância para a preservação da vida dos pacientes. Uma única doação pode ajudar até 4 vidas. 
+
+Doe Sangue, Doe Vida!"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Next" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 236.235
+margin_top = 680.932
+margin_right = 278.235
+margin_bottom = 700.932
+rect_scale = Vector2( 1.64657, 2.28944 )
+text = "Next"
+flat = true
+script = ExtResource( 4 )
+
+[connection signal="pressed" from="Next" to="Next" method="_on_Next_pressed"]

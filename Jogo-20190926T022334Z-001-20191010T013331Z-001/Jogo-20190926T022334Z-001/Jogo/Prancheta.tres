@@ -1,0 +1,17 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "Prancheta"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/Plano de fundo, doação (F)/Bancada/Prancheta:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -27.378, 2223.64 ), Vector2( -27.3781, 10.5883 ) ]
+}

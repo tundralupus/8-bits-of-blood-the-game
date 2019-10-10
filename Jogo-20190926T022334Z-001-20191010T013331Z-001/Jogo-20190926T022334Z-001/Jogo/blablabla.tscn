@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://imagens/Plano de fundo, doação (F).png" type="Texture" id=1]
+[ext_resource path="res://imagens/Bancada.png" type="Texture" id=2]
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=3]
+[ext_resource path="res://Button.gd" type="Script" id=4]
+
+[node name="Node" type="Node"]
+
+[node name="Plano de fundo, doação (F)2" type="Sprite" parent="."]
+position = Vector2( 682.647, 385.656 )
+scale = Vector2( 0.354523, 0.353502 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bancada" type="Sprite" parent="Plano de fundo, doação (F)2"]
+position = Vector2( 6.12549, 1.58594 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="Plano de fundo, doação (F)2"]
+margin_left = -866.875
+margin_top = -1083.41
+margin_right = 653.125
+margin_bottom = 1079.59
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Plano de fundo, doação (F)2/Panel"]
+margin_right = 235.0
+margin_bottom = 282.0
+rect_scale = Vector2( 6.4808, 7.70609 )
+text = "Oi, tudo bem ? Você é novo por aqui certo ?
+Meu nome é João e eu sou o responsável pela coleta de sangue dos voluntários, você vai ficar responsável por separar os tipos sanguíneos que foram coletados, vou deixar na sua caderneta todas as informações do sangue que você precisa pra analisar e separar seus tipos. Lembrando que o RH mostra se o sangue é positivo ou negativo, os anticorpos combatem o sangue que não pode entrar na sua corrente sanguínea é o antígeno determina se é tipo A ou B, quando não tem significa que é tipo 0, boa sorte!"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 231.365
+margin_top = 675.949
+margin_right = 273.365
+margin_bottom = 697.949
+rect_scale = Vector2( 1.93316, 2.93027 )
+text = "Next"
+flat = true
+script = ExtResource( 4 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
